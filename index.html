@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Single-page design portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="/css/owlcarousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="/css/owlcarousel/owl.theme.default.min.css">
+</head>
+<body>
+    <nav class="nav">
+      <div class="container">
+        <ul class="nav__wrapper">
+          <li class="nav__item">
+            <img src="/assets/images/logo.svg" width="64" height="64" alt="Logo" class="nav__logo">
+          </li>
+          <li class="nav__item">
+            <a href="#" class="button button--primary">Free Consultation</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__intro">
+          <h1 class="header__headline">Design solutions made easy</h1>
+          <p class="header__description">With over ten years of experience in various design disciplines, I'm your one-stop shop for your design needs.</p>
+        </div>
+        
+        <ul class="cards">
+          <article class="card card--graphic-design">
+            <img src="/assets/images/pattern-graphic-design.svg" width="128" height="192" alt="" class="card__icon">
+            <span class="card__title">Graphic Design</span>
+          </article>
+          <article class="card card--ui-ux">
+            <img src="/assets/images/pattern-ui-ux.svg" width="" height="64" alt="64" alt="" class="card__icon">
+            <span class="card__title">UI/UX</span>
+          </article>
+          <article class="card card--apps">
+            <img src="/assets/images/pattern-apps.svg" width="" height="64" alt="64" alt="" class="card__icon">
+            <span class="card__title">Apps</span>
+          </article>
+          <article class="card card--photography">
+            <img src="/assets/images/pattern-photography.svg" width="160" height="64" alt="" class="card__icon">
+            <span class="card__title">Photography</span>
+          </article>
+          <article class="card card--illustrations">
+            <img src="/assets/images/pattern-illustrations.svg" width="128" height="64" alt="" class="card__icon">
+            <span class="card__title">Illustrations</span>
+          </article>
+          <article class="card card--motion-graphics">
+            <img src="/assets/images/pattern-motion-graphics.svg" width="128" height="64" alt="" class="card__icon">
+            <span class="card__title">Motion Graphics</span>
+          </article>
+        </ul>
+      </div>
+    </header>
+    
+    <section class="container">
+      <div class="about">
+        <div class="about__image-wrap">
+          <img src="/assets/images/image-amy.webp" width="445" height="445" class="about__image" alt="Amy profile picture">
+        </div>
+        <div class="about__text-wrap">
+          <h2 class="about__headline">I'm Amy, and I'd love to work on your next project</h2>
+          <p class="about__description">I love working with others to create beautiful design solutions. I've designed everything from brand illustrations to complete mobile apps. I'm also handy with a camera!</p>
+          <a href="#" class="button button--secondary">Free Consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="slider">
+      <h3 class="slider__headline">My Work</h3>
+
+      <div class="owl-carousel owl-theme">
+        <div class="carousel__item">
+          <img src="/assets/images/image-slide-1.jpg" width="540" height="360" class="carousel__image" alt="" >
+        </div>
+        <div class="carousel__item">
+          <img src="/assets/images/image-slide-2.jpg" width="540" height="360" class="carousel__image" alt="" >
+        </div>
+        <div class="carousel__item">
+          <img src="/assets/images/image-slide-3.jpg" width="540" height="360" class="carousel__image" alt="" >
+        </div>
+        <div class="carousel__item">
+          <img src="/assets/images/image-slide-4.jpg" width="540" height="360" class="carousel__image" alt="" >
+        </div>
+        <div class="carousel__item">
+          <img src="/assets/images/image-slide-5.jpg" width="540" height="360" class="carousel__image" alt="" >
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="consult">
+        <div class="consult__text-wrap">
+          <h3 class="consult__headline">Book a call with me</h3>
+          <p class="consult__description">I'd love to have a chat to see how I can help you. The best first step is for us to discuss your project during a free consultation. Then we can move forward from there.</p>  
+        </div>
+        <a href="#" class="button button--secondary">Free Consultation</a>
+      </div>
+    </section>
+
+    <footer class="nav">
+      <div class="container">
+        <ul class="footer__wrapper">
+          <li class="footer__item">
+            <img src="/assets/images/logo.svg" width="64" height="64" alt="Logo">
+          </li>
+          <li class="footer__item">
+            <a href="#" class="button button--primary">Free Consultation</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+  </div>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/owl.carousel.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      const nextIcon = '<img src="/assets/images/icon-arrow-right.svg" alt="Next" class="owl-next">';
+      const prevIcon = '<img src="/assets/images/icon-arrow-left.svg" alt="Previous" class="owl-prev">';
+
+      $('.owl-carousel').owlCarousel({
+          center: true,
+          loop: true,
+          margin: 30,
+          nav: true,
+          dots: false,
+          autoWidth: true,
+          navText: [prevIcon, nextIcon],
+          autoplay: true,
+          responsive:{
+              425: {
+                  items: 2
+              },
+              768: {
+                  items: 2
+              },
+              1440: {
+                  items: 2
+              }
+          }
+      });
+
+    });
+  </script>
+</body>
+</html>
